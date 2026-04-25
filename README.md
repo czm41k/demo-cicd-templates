@@ -6,8 +6,8 @@
 
 ```yml
 include:
-  - project: "group/vault-template-repo"
-    ref: "v1.0.0"
+  - project: "demo-evgenii/cicd-templates"
+    ref: "main"
     file: "/vault-ci-template.yml"
 ```
 
