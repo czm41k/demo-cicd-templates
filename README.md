@@ -11,14 +11,14 @@ include:
     file: "/vault-ci-template.yml"
 ```
 
-2. В каждой джобе, где нужны секреты из данной интеграции добавлять аттрибуты `extends: [".vault-integration"]` и `secrets`. Например, для получения из Vault переменной с именем `NEXUS_PASSWORD` и его сохранения в переменную пайплайна с именем `MY_NEXUS_PASSWORD` произведите следующие изменения:
+2. В каждой джобе, где нужны секреты из данной интеграции добавлять аттрибуты `extends: [".vault-integration"]` и `secrets`. Например, для получения из Vault переменной с именем `SECRET` по адресу `SECRET_PATH` в `MY-KV` хранилище и его сохранения в переменную пайплайна с именем `MY_SECRET` произведите следующие изменения:
 
 ```yml
 
 ...
 secrets:
-    MY_NEXUS_PASSWORD:
-        vault: demo/KUBECONFIG@dcd-kv
+    MY_SECRET:
+        vault: SECRET_PATH/SECRET@MY-KV
         token: $VAULT_ID_TOKEN
         file: false
 ...
