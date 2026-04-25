@@ -1,0 +1,12 @@
+.vault-integration:
+  id_tokens:
+    VAULT_ID_TOKEN:
+      aud: vault
+  variables:
+    # Значения приходят из CI/CD Variables проекта:
+    # vault_server_url, vault_auth_role, vault_auth_path
+    VAULT_SERVER_URL: $vault_server_url
+    VAULT_AUTH_ROLE: $vault_auth_role
+    VAULT_AUTH_PATH: $vault_auth_path
+  before_script: []
+  script: []
