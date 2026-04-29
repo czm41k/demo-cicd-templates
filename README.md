@@ -24,4 +24,4 @@ secrets:
 ...
 
 ```
-3. В рамках данной джобы файл... TBD
+3. Больше информации с примерами в [продуктовой документации](https://deckhouse.ru/products/code/documentation/user/external-vault.html)
